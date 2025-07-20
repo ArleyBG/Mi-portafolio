@@ -1,0 +1,154 @@
+/* === NAV FIJO Y GENERAL === */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #181b1d;
+  border-bottom: 1px solid #444;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+/* === NAVBAR INTERNA === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: clamp(320px, 80vw, 1500px);
+  margin: 0 auto;
+}
+
+/* === LOGO Y TEXTO === */
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.logo-name a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 1.3em;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.logo-name a:hover {
+  color: #ff1100;
+  transition: transform 0.5s ease;
+}
+
+/* === ENLACES DE NAVEGACIÓN === */
+.nav-botons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  transition: max-height 0.3s ease;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item a {
+  padding-bottom: 10px;
+}
+
+.navbar-link {
+  position: relative;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  transform: scale(0);
+  transform-origin: right;
+  transition: transform 0.5s ease;
+}
+
+.navbar-link:hover::after {
+  transform: scale(1);
+  background-color: #0074D9;
+}
+
+.navbar-link.active::after {
+  transform: scaleX(1);
+}
+
+.navbar-link.active {
+  color: #ffffffb5;
+}
+
+.navbar-link.active::after {
+  background-color: #ff1100;
+}
+
+/* === HAMBURGUESA (INVISIBLE EN ESCRITORIO) === */
+.hamburguesa {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburguesa .linea {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .hamburguesa {
+    display: flex;
+  }
+
+  .nav-botons {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background-color: #181b1d;
+    flex-direction: column;
+    align-items: flex-start;
+    max-height: 0;
+    overflow: hidden;
+    gap: 0;
+    padding: 0;
+  }
+
+  .nav-botons.activo {
+    max-height: 300px; /* Ajusta según el contenido */
+    padding: 1rem 2rem;
+    gap: 1rem;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-item a {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #333;
+  }
+}

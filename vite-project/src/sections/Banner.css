@@ -1,0 +1,69 @@
+.bannerFondo {
+    display: flex;
+    position: relative;
+    background-image: url('/src/assets/bannerFondo.png');
+    background-size: clamp(500px, 70vw, 1400px) auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;  
+    margin-right: -50vw;
+    margin-top: 40px;
+    opacity: 1;
+    margin-bottom: 180px;
+}
+
+.bannerFondo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0.4, 0.4, 0.4, 0.7);
+    z-index: 1;
+}
+
+.contenedor-banner {
+  display: flex;
+  align-items: center;
+  max-width: clamp(600px, 80vw, 1400px);
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.sobre-mi {
+  position: relative;
+  z-index: 2;
+}
+
+.sobre-mi p {
+  line-height: 1.5;
+  color: #ffffffb5;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+.avatar-container {
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.avatar-container {
+  position: absolute;
+  bottom: -70px;
+}
+
+.avatar-img {
+  width: clamp(120px, 18vw, 180px);
+  height: clamp(120px, 18vw, 180px);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+  

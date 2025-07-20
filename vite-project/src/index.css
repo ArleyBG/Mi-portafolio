@@ -1,0 +1,50 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Evita scroll horizontal global */
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #24292e;
+}
+
+h1 {
+  line-height: 1.1;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+}
+
+h2 {   
+  line-height: 1.1;
+  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+}
+
+h3 {   
+  line-height: 1.1;
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+}
+
+
+

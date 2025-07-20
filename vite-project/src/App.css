@@ -1,0 +1,5 @@
+#root {
+  max-width: clamp(600px, 80vw, 1400px);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
