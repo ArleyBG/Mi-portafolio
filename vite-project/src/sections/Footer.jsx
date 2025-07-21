@@ -7,7 +7,7 @@ function Footer() {
         <section className="section-footer">
             <footer className="content-footer">
                 <div className="icono-footer">
-                    <figure content-img>
+                    <figure>
                         <img src={IconFooter} alt="Icono de un astronauta" className="icon-astro" />
                     </figure>
                 </div>

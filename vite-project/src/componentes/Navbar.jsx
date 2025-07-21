@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../assets/logoPortafolioweb.svg";
 import useHashScroll from "../Hooks/useHashScroll";
+import { useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 
@@ -12,6 +13,8 @@ function Navbar() {
   const toggleMenu = () => setMenuAbierto(prev => !prev);
   const cerrarMenu = () => setMenuAbierto(false);
 
+
+  const location = useLocation();
   return (
     <nav>
       <div className="navbar">
