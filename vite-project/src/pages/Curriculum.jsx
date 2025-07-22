@@ -1,9 +1,11 @@
+import SectionCurriculum from "../sections/sectionCurriculum";
+
 function Curriculum() {
     return (
-        <section>
-            <h1>Mi curriculum</h1>
-        </section>
-    )
+        <>
+            <SectionCurriculum />
+        </>
+    );
 }
 
 export default Curriculum;

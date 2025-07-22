@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "title": "Educación",
+    "icon": "FaGraduationCap",
+    "color": "bg-yellow-400",
+    "details": [
+      {
+        "year": "2020 – 2024",
+        "title": "Ingeniería de Sistemas",
+        "institution": "Universidad XYZ"
+      },
+      {
+        "year": "2016 – 2019",
+        "title": "Técnico en Desarrollo Web",
+        "institution": "SENA"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Experiencia",
+    "icon": "FaBriefcase",
+    "color": "bg-pink-400",
+    "details": [
+      {
+        "experience": "2016 – 2019",
+        "company": "Dentsu",
+        "rol": "Frontend Developer"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Habilidades",
+    "icon": "FaTools",
+    "color": "bg-blue-400",
+    "details": []
+  },
+  {
+    "id": 4,
+    "title": "Certificados",
+    "icon": "FaCertificate",
+    "color": "bg-cyan-400",
+    "details": []
+  },
+  {
+    "id": 5,
+    "title": "Descargar CV",
+    "icon": "FaFileDownload",
+    "color": "bg-green-500",
+    "details": []
+  }
+]

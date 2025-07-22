@@ -1,0 +1,202 @@
+.curriculum-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.curriculum-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.card-curriculum-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 30px;
+}
+
+.card-curriculum {
+    position: relative;
+    width: 180px;
+    height: 250px;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: white;
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+    overflow: visible;
+}
+
+.card-curriculum::after {
+  content: "";
+  position: absolute;
+  bottom: -110px; /* separación del reflejo, ajústalo a gusto */
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  transform: scaleY(-1);
+  opacity: 0.3;
+  pointer-events: none;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent);
+}
+
+.card-curriculum:hover {
+    transform: translateY(-5px);
+}
+
+.card-curriculum-icon {
+    font-size: 2rem;
+}
+
+.card-curriculum button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.4rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-curriculum button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Colores específicos (puedes cambiar por los que necesites) */
+.bg-yellow-400 {
+    background-color: #facc15;
+}
+
+.bg-pink-400 {
+    background-color: #f472b6;
+}
+
+.bg-blue-400 {
+    background-color: #60a5fa;
+}
+
+.bg-cyan-400 {
+    background-color: #22d3ee;
+}
+
+.bg-green-500 {
+    background-color: #22c55e;
+}
+
+/* Timeline-only color variables */
+.timeline-yellow {
+    --timeline-color: #facc15;
+}
+
+.timeline-pink {
+    --timeline-color: #f472b6;
+}
+
+.timeline-blue {
+    --timeline-color: #60a5fa;
+}
+
+.timeline-cyan {
+    --timeline-color: #22d3ee;
+}
+
+.timeline-green {
+    --timeline-color: #22c55e;
+}
+
+/* Línea de tiempo */
+.timeline {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 4px solid var(--timeline-color, #facc15);
+    animation: fadeIn 0.4s ease;
+}
+
+.timeline-item {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -0.8rem;
+    top: 0.3rem;
+    width: 12px;
+    height: 12px;
+    background-color: var(--timeline-color, #facc15);
+    border-radius: 50%;
+}
+
+.timeline-item .year {
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+}
+
+.timeline-item p {
+    margin: 0;
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Timeline color vars sin fondo */
+.timeline-yellow {
+    --timeline-color: #facc15;
+}
+
+.timeline-pink {
+    --timeline-color: #f472b6;
+}
+
+.timeline-blue {
+    --timeline-color: #60a5fa;
+}
+
+.timeline-cyan {
+    --timeline-color: #22d3ee;
+}
+
+.timeline-green {
+    --timeline-color: #22c55e;
+}
+
+/* Ajuste para que el swiper no corte los bordes */
+.swiper {
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
